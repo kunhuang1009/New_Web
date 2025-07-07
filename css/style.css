@@ -145,7 +145,6 @@ option{
     margin: 0;
     height: 80px;
     border-radius: 0 30px 30px 0;
-
 }
 
 .selection-item {
@@ -182,17 +181,21 @@ option{
     margin-right: 12px;
     color: #8B4513;
     font-size: 1.4rem;
-    width: 20px;
+    width: 50px;
+    height: 40px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .selection-icon-img {
     width: 40px;
     height: 40px;
     opacity: 0.8;
+    max-width: 100%;
+    object-fit: contain;
 }
 
 .selection-content {
@@ -243,6 +246,7 @@ option{
     min-width: 200px;
     height: 100%;
     border-radius: 0 30px 30px 0;
+    text-transform: uppercase;
 }
 
 .schedule-now-btn:hover {
@@ -908,6 +912,26 @@ option{
         height: 180px;
         border-radius: 35px;
     }
+
+    .selection-controls {
+        height: 75px;
+    }
+    
+    .selection-icon {
+        width: 45px;
+        height: 38px;
+    }
+    
+    .selection-icon-img {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .schedule-now-btn {
+        font-size: 1.3rem;
+        min-width: 180px;
+        padding: 0 30px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -962,23 +986,41 @@ option{
     }
     
     .selection-controls {
-        flex-direction: column;
-        height: auto;
-        border-radius: 0;
+        height: 70px;
     }
     
     .selection-item {
         padding: 12px 20px;
-        border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
     
-    .selection-item:last-of-type {
-        border-bottom: none;
+    .selection-item::after {
+        right: 10px;
+        font-size: 1rem;
+    }
+    
+    .selection-icon {
+        width: 40px;
+        height: 35px;
+        margin-right: 10px;
+    }
+    
+    .selection-icon-img {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .selection-label {
+        font-size: 0.7rem;
+    }
+    
+    .selection-dropdown {
+        font-size: 0.9rem;
     }
     
     .schedule-now-btn {
-        width: 100%;
+        font-size: 1.1rem;
+        min-width: 160px;
+        padding: 0 20px;
     }
     
     .promo-content h2 {
@@ -1059,6 +1101,25 @@ option{
     .promo-image-4 {
         height: 150px;
     }
+
+    .selection-icon {
+        width: 40px; /* 等比例缩小 */
+        height: 40px;
+        margin-right: 10px;
+    }
+    
+    .selection-icon-img {
+        width: 35px; /* 等比例缩小图标 */
+        height: 35px;
+    }
+    
+    .selection-label {
+        font-size: 0.7rem; /* 缩小字体 */
+    }
+    
+    .selection-dropdown {
+        font-size: 0.9rem; /* 缩小字体 */
+    }
 }
 
 @media (max-width: 576px) {
@@ -1125,28 +1186,44 @@ option{
     }
     
     .selection-controls {
-        padding: 0;
+        flex-direction: column;
+        height: auto;
+        border-radius: 0;
+        position: relative;
+        margin-top: 20px;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 15px;
+        overflow: hidden;
     }
     
     .selection-item {
-        padding: 10px 15px;
+        padding: 12px 15px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .selection-item::after {
+        right: 15px;
     }
     
     .selection-icon {
-        margin-right: 8px;
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
     }
     
-    .selection-label {
-        font-size: 0.8rem;
-    }
-    
-    .selection-dropdown {
-        font-size: 0.8rem;
+    .selection-icon-img {
+        width: 28px;
+        height: 28px;
     }
     
     .schedule-now-btn {
-        font-size: 0.9rem;
-        padding: 10px 15px;
+        width: 100%;
+        border-radius: 0 0 15px 15px;
+        min-height: 50px;
+        font-size: 1rem;
     }
     
     .promo-content h2 {
@@ -1235,6 +1312,40 @@ option{
     
     .welcome-team-img {
         margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .selection-item {
+        padding: 10px 15px;
+    }
+    
+    .selection-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 8px;
+    }
+    
+    .selection-icon-img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .selection-label {
+        font-size: 0.65rem;
+    }
+    
+    .selection-dropdown {
+        font-size: 0.8rem;
+    }
+    
+    .schedule-now-btn {
+        min-height: 45px;
+        font-size: 0.9rem;
+    }
+
+    .selection-controls {
+        max-width: 95%;
     }
 }
 
