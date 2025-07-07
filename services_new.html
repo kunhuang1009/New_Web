@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Pacific Coast Fence</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/page3.css" rel="stylesheet">
+    <style>
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .social-icon:hover {
+            background-color: #46291a;
+        }
+        
+       
+        .footer-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-heading {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-text {
+            color: #aaa;
+            line-height: 1.6;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-link {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 1rem;
+        }
+        
+        .footer-link:hover {
+            color: white;
+        }
+        
+        .footer-copyright {
+            color: #777;
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+        
+        .footer-bottom-link {
+            color: #aaa;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        
+        .footer-bottom-link:first-child {
+            color: white;
+            font-weight: 600;
+        }
+        
+        
+        .payment-methods {
+            display: flex;
+            gap: 8px;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        
+        .payment-icon {
+            width: 55px;
+            height: 35px;
+            overflow: hidden;
+            flex-shrink: 0;
+            padding: 0;
+            border-radius: 0;
+            background-color: transparent;
+            display: block;
+        }
+        
+        .payment-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transform: scale(1.3);
+        }
+        
+       
+        .footer-section {
+            background-color: #222;
+            color: #fff;
+            padding: 300px 0 100px 0;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+        
+        .footer-divider {
+            border-color: #333;
+            margin: 4rem 0;
+            border-width: 2px;
+        }
+        
+        .why-choose-section {
+            background-color: #2b2b2b;
+            color: white;
+            padding: 100px 0 80px 0; 
+        }
+        
+        .section-title-badge {
+            color: #ffc107;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: inline-block;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .section-title {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        
+        .feature-row {
+            margin-bottom: 40px;
+            margin-top: 70px; 
+        }
+        
+        .feature-box {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .feature-icon {
+            margin-right: 20px;
+            flex: 0 0 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .booking-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #f39c12;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .clock-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #ffc107;
+            color: black;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+            border: 2px solid #e0a800;
+        }
+        
+        .measurement-icon {
+            mix-blend-mode: multiply;
+            width: 60px;
+            height: 60px;
+        }
+        
+        .support-icon {
+            width: 60px;
+            height: 60px;
+        }
+        
+        .feature-content {
+            flex: 1;
+        }
+        
+        .feature-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #d9d9d9;
+            margin-bottom: 10px;
+        }
+        
+        .feature-description {
+            font-size: 0.95rem;
+            color: #d9d9d9;
+            line-height: 1.6;
+        }
+        
+        .team-image-container {
+            border: 3px solid #ffc107;
+            padding: 5px;
+            height: 100%;
+            max-height: 400px;
+        }
+        
+        .team-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+      
+        .core-services-section {
+            padding: 120px 0 120px;
+            background-color: #fff;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .services-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #333;
+        }
+        
+        .blogs-updates {
+            color: #ffc107;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: inline-block;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .blogs-updates-icon {
+            color: #ffc107;
+            font-size: 1rem;
+            margin-left: 5px;
+        }
+        
+        .service-row {
+            margin-bottom: 40px;
+        }
+        
+        .service-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            height: 100%;
+            margin-bottom: 30px;
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .service-content {
+            padding: 20px;
+        }
+        
+        .service-category {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 5px;
+        }
+        
+        .service-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .service-desc {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            min-height: 120px;
+        }
+        
+        .quote-btn {
+            display: inline-block;
+            background-color: #46291a;
+            color: white;
+            padding: 8px 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .quote-btn:hover {
+            background-color: #5a3723;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(70, 41, 26, 0.4);
+        }
+        
+        .custom-design-section {
+            background-color: #FFF8F0; 
+            border-radius: 20px;
+            background-image: url('img/footerpage.png?v=20240526');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 40px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: auto;
+            width: 90%;
+            max-width: 1240px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            z-index: 100; 
+            max-width: 100vw;
+        }
+        
+        .custom-design-content {
+            position: relative;
+            z-index: 102; 
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .custom-design-title {
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        
+        .custom-design-subtitle {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 25px;
+        }
+        
+        .custom-design-form {
+            display: flex;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .custom-design-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+            font-size: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .custom-design-btn {
+            background-color: #46291a;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            padding: 15px 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .custom-design-btn:hover {
+            background-color: #5a3723;
+        }
+        
+        /* 添加自适应样式 */
+        @media (max-width: 992px) {
+            .custom-design-section {
+                padding: 50px 30px;
+                width: 95%;
+                background-size: cover;
+            }
+            
+            .custom-design-title {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .custom-design-section {
+                padding: 40px 25px;
+                width: 95%;
+            }
+            
+            .custom-design-title {
+                font-size: 2.4rem;
+            }
+            
+            .custom-design-form {
+                flex-direction: column;
+            }
+            
+            .custom-design-input {
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            
+            .custom-design-btn {
+                border-radius: 5px;
+                width: 100%;
+            }
+            
+            .spacer-div {
+                height: 150px !important;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .custom-design-section {
+                padding: 30px 20px;
+                width: 92%;
+                border-radius: 15px;
+            }
+            
+            .custom-design-title {
+                font-size: 1.8rem;
+            }
+            
+            .custom-design-subtitle {
+                font-size: 0.9rem;
+                margin-bottom: 20px;
+            }
+            
+            .custom-design-input {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .custom-design-btn {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .spacer-div {
+                height: 130px !important;
+            }
+        }
+        
+        .hero-content {
+            position: absolute;
+            top: 48%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            text-align: center;
+            width: 85%;
+        }
+        
+        .hero-title {
+            font-size: 6.5rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="home" class="hero-section position-relative" style="background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('img/img2.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <div class="logo-container">
+            <div class="logo">
+                <i class="fa fa-leaf logo-icon"></i>
+                <a href="contact_new.html" style="text-decoration: none; color: inherit;"><span class="logo-text">FENCE</span></a>
+            </div>
+        </div>
+
+        <nav class="hero-navigation">
+            <div class="nav-capsule">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services_new.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products_new.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about_new.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact_new.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <h1 class="hero-title text-white fw-bold">Custom Fences<br>For You</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="section-title-badge">Why Choose Us ✨</span>
+            </div>
+            <h2 class="section-title">We Are Always Ready To Build Your Fence</h2>
+            
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row feature-row">
+                       
+                        <div class="col-md-6">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <img src="img/icon4.png" alt="Quick Quote Icon" class="measurement-icon">
+                                </div>
+                                <div class="feature-content">
+                                    <h3 class="feature-title">Quick Quote</h3>
+                                    <p class="feature-description">Easily request a free fence quote online with just a few simple steps.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                       
+                        <div class="col-md-6">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <img src="img/icon3.png" alt="Fast Installation Icon" class="measurement-icon">
+                                </div>
+                                <div class="feature-content">
+                                    <h3 class="feature-title">Fast Installation</h3>
+                                    <p class="feature-description">We ensure fast, secure, and professional fence installation at your convenience.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row feature-row">
+                       
+                        <div class="col-md-6">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <img src="img/icon2.png" alt="免费现场测量图标" class="measurement-icon">
+                                </div>
+                                <div class="feature-content">
+                                    <h3 class="feature-title">Free Site Measurement</h3>
+                                    <p class="feature-description">We offer free on-site measurement to help you plan the perfect fence layout.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-md-6">
+                            <div class="feature-box">
+                                <div class="feature-icon">
+                                    <img src="img/icon1.png" alt="专业支持图标" class="support-icon">
+                                </div>
+                                <div class="feature-content">
+                                    <h3 class="feature-title">Professional Support</h3>
+                                    <p class="feature-description">Our team is always ready to assist you before, during, and after installation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="team-image-container">
+                        <img src="img/wq4.jpg" alt="专业团队成员" class="team-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="core-services-section">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="blogs-updates">Blogs & Updates ✨</span>
+            </div>
+            <h2 class="services-title">Our Core Services</h2>
+            
+            
+            <div class="row g-4 service-row">
+               
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/wq1.png" alt="Custom Fence Design">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-category">Design</div>
+                            <h3 class="service-name">Custom Fence Design</h3>
+                            <p class="service-desc">
+                                We offer fully personalized fence designs that match your style, space, and security needs. Our designers will work closely with you to create a unique fence that enhances your property's value and visual appeal.
+                            </p>
+                            <a href="contact_new.html" class="quote-btn">Get A Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+               
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/565a311d-78af-4c3a-bc75-e2dc92fa2f26_1751711329950965064~tplv-a9rns2rl98-web-preview-watermark.png" alt="Fence Installation">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-category">Installation</div>
+                            <h3 class="service-name">Fence Installation</h3>
+                            <p class="service-desc">
+                                Our experienced installation team ensures fast, secure, and high-quality fence setup. From preparation to final inspection, we handle every detail with precision to deliver long-lasting results.
+                            </p>
+                            <a href="contact_new.html" class="quote-btn">Get A Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/4bb1d7cb-61d7-48d5-bd97-26a150cf9753_1751711408638659692~tplv-a9rns2rl98-web-preview-watermark.png" alt="Fence Repair">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-category">Repair</div>
+                            <h3 class="service-name">Fence Repair</h3>
+                            <p class="service-desc">
+                                We provide timely fence repair and maintenance services to keep your fences strong, safe, and attractive. Our regular maintenance plans help prevent damage and extend the life of your fence.
+                            </p>
+                            <a href="contact_new.html" class="quote-btn">Get A Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+            <div class="row g-4 service-row">
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/1093c898-8b54-459f-a7c2-cf381620db5e_1751711123981142577~tplv-a9rns2rl98-web-preview-watermark.png" alt="Free Site Measurement">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-category">Free Service</div>
+                            <h3 class="service-name">Free Site Measurement</h3>
+                            <p class="service-desc">
+                                Get a free on-site measurement and expert consultation to find the best fencing solution for your property. Our team will guide you through design, material selection, and project planning.
+                            </p>
+                            <a href="contact_new.html" class="quote-btn">Get A Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+               
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/97bd5ac7-3a1b-446e-9967-994581e85237_1751710738621950263~tplv-a9rns2rl98-web-preview-watermark.png" alt="Commercial Fencing">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-category">Commercial</div>
+                            <h3 class="service-name">Commercial Fencing</h3>
+                            <p class="service-desc">
+                                We deliver secure, durable, and customizable fencing solutions for commercial properties. Whether you need security fences, boundary markers, or decorative fencing, we provide reliable options tailored to your business.
+                            </p>
+                            <a href="contact_new.html" class="quote-btn">Get A Quote</a>
+                        </div>
+                    </div>
+                </div>
+                
+              
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="img/c7eb8a6c-4a7b-4ca8-a633-f4b37429a777_1751711215666519308~tplv-a9rns2rl98-web-preview-watermark.png" alt="Residential Fencing">
+                        </div>
+                        <div class="service-content">
+                            <div class="service-category">Residential</div>
+                            <h3 class="service-name">Residential Fencing</h3>
+                            <p class="service-desc">
+                                We offer stylish and sturdy fencing solutions for homes and gardens. Our residential fences not only improve safety and privacy but also add aesthetic charm to your outdoor spaces.
+                            </p>
+                            <a href="contact_new.html" class="quote-btn">Get A Quote</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <div class="spacer-div" style="height: 180px; position: relative; background-color: #222;"></div>
+    
+   
+    <section class="custom-design-section">
+     
+        <div class="container-fluid px-3">
+            <div class="custom-design-content">
+                <h2 class="custom-design-title">Custom Fence Design</h2>
+                <p class="custom-design-subtitle">Fully personalized designs tailored to your property's needs.</p>
+                
+               
+                <form class="custom-design-form">
+                    <input type="email" class="custom-design-input" placeholder="Enter Your Email Address...">
+                    <button type="submit" class="custom-design-btn">Get a Quote</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer id="contact" class="footer-section py-4">
+        <div class="container pt-4 mt-4" style="max-width: 1250px;">
+            <div class="row g-4 pt-3 mt-3">
+               
+                <div class="col-lg-3 col-md-6">
+                    <h2 class="footer-title mb-4 pt-3">Ready To Build<br>Your Fence?</h2>
+                    <a href="contact_new.html" class="btn footer-btn px-4 py-2 fw-bold">Get A Free Quote</a>
+                </div>
+
+               
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading mb-4 pt-3">Quick Link</h5>
+                    <ul class="list-unstyled">
+                       <li class="mb-3"><a href="index.html" class="footer-link">Home</a></li>
+                        <li class="mb-3"><a href="services_new.html" class="footer-link">Services</a></li>
+                        <li class="mb-3"><a href="products_new.html" class="footer-link">Products</a></li>
+                        <li class="mb-3"><a href="about_new.html" class="footer-link">About</a></li>
+                        <li class="mb-3"><a href="contact_new.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+               
+                <div class="col-lg-3 col-md-6 pt-3">
+                    <div class="contact-section mb-4">
+                        <h5 class="footer-heading mb-3"><i class="bi bi-telephone-fill me-2 footer-icon"></i>More Inquiry</h5>
+                        <p class="footer-text">+1 530-244-2158</p>
+                    </div>
+
+                    <div class="contact-section mb-4">
+                        <h5 class="footer-heading mb-3"><i class="bi bi-envelope-fill me-2 footer-icon"></i>Send Mail</h5>
+                        <p class="footer-text">PacificCoastFence81@gmail.com</p>
+                    </div>
+
+                    <div class="contact-section">
+                        <h5 class="footer-heading mb-3"><i class="bi bi-geo-alt-fill me-2 footer-icon"></i>Address</h5>
+                        <p class="footer-text">14546 Clear Creek Knolls Dr, Redding, CA<br>96001‑9542, United States</p>
+                    </div>
+                </div>
+
+               
+                <div class="col-lg-3 col-md-6 pt-3">
+                    <h5 class="footer-heading mb-3">We Are Here</h5>
+                    <p class="footer-text mb-4">We provide safe, stylish, and affordable fencing solutions to enhance your outdoor space. Built to last, designed with care.</p>
+
+                    <h5 class="footer-heading mb-3">Payment Partner</h5>
+                    <div class="payment-methods">
+                        <img src="img/visa.jpg" alt="Visa" class="payment-icon">
+                        <img src="img/stripe.jpg" alt="Stripe" class="payment-icon">
+                        <img src="img/paypal.jpg" alt="PayPal" class="payment-icon">
+                        <img src="img/Woo.jpg" alt="WOO" class="payment-icon">
+                        <img src="img/Skrill.jpg" alt="Skrill" class="payment-icon">
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider my-4">
+
+            <div class="row align-items-center footer-bottom py-3 mt-2">
+                <div class="col-md-8 d-flex align-items-center">
+                    <div class="social-icons me-5">
+                        <a href="#" class="social-icon" style="transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#555'; this.style.color='#ffc107';" onmouseout="this.style.backgroundColor='#333'; this.style.color='white';"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon" style="transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#555'; this.style.color='#ffc107';" onmouseout="this.style.backgroundColor='#333'; this.style.color='white';"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#" class="social-icon" style="transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#555'; this.style.color='#ffc107';" onmouseout="this.style.backgroundColor='#333'; this.style.color='white';"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon" style="transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#555'; this.style.color='#ffc107';" onmouseout="this.style.backgroundColor='#333'; this.style.color='white';"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                    <p class="footer-copyright mb-0">©Copyright 2025 Pacific Coast Fence | Design by Zhou Boying</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <div class="footer-links-wrapper">
+                        <a href="#" class="footer-bottom-link">PC Fence Inc.</a>
+                        <a href="#" class="footer-bottom-link">Privacy & Safety</a>
+                        <span class="footer-bullet">•</span>
+                        <a href="#" class="footer-bottom-link">Service Terms</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+        
+        // 定位Custom Fence Design区域的函数
+        function positionCustomDesignSection() {
+            const customDesignSection = document.querySelector('.custom-design-section');
+            const footerSection = document.querySelector('.footer-section');
+            const spacerDiv = document.querySelector('.spacer-div');
+            
+            if (customDesignSection && footerSection && spacerDiv) {
+                // 获取页脚顶部位置
+                const footerTop = footerSection.getBoundingClientRect().top + window.scrollY;
+                
+                // 设置间隔区域高度
+                let spacerHeight = 180; // 增加间隔高度，让Custom Fence Design往下移
+                
+                // 根据屏幕宽度调整间隔高度
+                if (window.innerWidth <= 576) {
+                    spacerHeight = 130; // 小屏幕上增加间隔
+                } else if (window.innerWidth <= 768) {
+                    spacerHeight = 150; // 中等屏幕上增加间隔
+                }
+                
+                spacerDiv.style.height = spacerHeight + 'px';
+                spacerDiv.style.backgroundColor = '#222'; 
+                
+                // 根据屏幕宽度调整Custom Fence Design区域位置
+                let positionFactor = 1.0; // 减小覆盖因子，让它往下移
+                if (window.innerWidth <= 576) {
+                    positionFactor = 0.7; // 在小屏幕上减少覆盖
+                } else if (window.innerWidth <= 768) {
+                    positionFactor = 0.8; // 在中等屏幕上适当覆盖
+                } else if (window.innerWidth <= 992) {
+                    positionFactor = 0.9; // 在大屏幕上增加覆盖
+                }
+                
+                // 添加额外的偏移量，使其向下移动
+                const extraOffset = 30;
+                customDesignSection.style.top = (footerTop - customDesignSection.offsetHeight * positionFactor + extraOffset) + 'px';
+                
+                // 确保宽度不超过视口宽度
+                const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+                const sectionWidth = Math.min(viewportWidth * 0.9, 1240); // 取视口宽度的90%和1240px中的较小值
+                customDesignSection.style.width = sectionWidth + 'px';
+                customDesignSection.style.maxWidth = '100vw';
+                
+                // 添加背景填充元素
+                let backgroundFiller = document.getElementById('background-filler');
+                if (!backgroundFiller) {
+                    backgroundFiller = document.createElement('div');
+                    backgroundFiller.id = 'background-filler';
+                    backgroundFiller.style.position = 'absolute';
+                    backgroundFiller.style.left = '0';
+                    backgroundFiller.style.width = '100%';
+                    backgroundFiller.style.backgroundColor = '#222'; 
+                    backgroundFiller.style.zIndex = '0'; 
+                    document.body.appendChild(backgroundFiller);
+                }
+                
+                // 调整背景填充元素的位置和高度
+                let fillerTop = footerTop - 170; // 调整背景填充元素的位置
+                let fillerHeight = 280;
+                
+                if (window.innerWidth <= 576) {
+                    fillerTop = footerTop - 120;
+                    fillerHeight = 200;
+                } else if (window.innerWidth <= 768) {
+                    fillerTop = footerTop - 150;
+                    fillerHeight = 240;
+                }
+                
+                backgroundFiller.style.top = fillerTop + 'px';
+                backgroundFiller.style.height = fillerHeight + 'px';
+            }
+        }
+        
+        // 页面加载和窗口大小改变时调整位置
+        window.addEventListener('load', positionCustomDesignSection);
+        window.addEventListener('resize', positionCustomDesignSection);
+        
+        // 确保页面完全加载后重新计算位置
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始定位
+            positionCustomDesignSection();
+            
+            // 延迟200ms后再次定位，确保所有元素都已正确加载
+            setTimeout(positionCustomDesignSection, 200);
+            
+            // 图片加载完成后再次定位
+            const images = document.querySelectorAll('img');
+            let loadedImagesCount = 0;
+            
+            images.forEach(img => {
+                if (img.complete) {
+                    loadedImagesCount++;
+                    if (loadedImagesCount === images.length) {
+                        positionCustomDesignSection();
+                    }
+                } else {
+                    img.addEventListener('load', () => {
+                        loadedImagesCount++;
+                        if (loadedImagesCount === images.length) {
+                            positionCustomDesignSection();
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html> 

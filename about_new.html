@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Pacific Coast Fence</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/page3.css" rel="stylesheet">
+    <style>
+        /* 页脚社交图标样式 */
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .social-icon:hover {
+            background-color: #46291a;
+        }
+        
+        /* 页脚字体样式 */
+        .footer-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-heading {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-text {
+            color: #aaa;
+            line-height: 1.6;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-link {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-size: 1rem;
+        }
+        
+        .footer-link:hover {
+            color: white;
+        }
+        
+        .footer-copyright {
+            color: #777;
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+        
+        .footer-bottom-link {
+            color: #aaa;
+            text-decoration: none;
+            margin-left: 15px;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+        
+        .footer-bottom-link:first-child {
+            color: white;
+            font-weight: 600;
+        }
+        
+        /* 支付图标样式 */
+        .payment-methods {
+            display: flex;
+            gap: 8px;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        
+        .payment-icon {
+            width: 55px;
+            height: 35px;
+            overflow: hidden;
+            flex-shrink: 0;
+            padding: 0;
+            border-radius: 0;
+            background-color: transparent;
+            display: block;
+        }
+        
+        .payment-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transform: scale(1.3);
+        }
+        
+        
+        .footer-section {
+            background-color: #222;
+            color: #fff;
+            padding: 300px 0 100px 0;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+        }
+        
+        .footer-divider {
+            border-color: #333;
+            margin: 4rem 0;
+            border-width: 2px;
+        }
+
+       
+        .contact-form-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .contact-form {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+        
+        .form-control {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .form-control:focus {
+            border-color: #46291a;
+            box-shadow: 0 0 0 0.25rem rgba(70, 41, 26, 0.25);
+        }
+        
+        .submit-btn {
+            background-color: #46291a;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #5a3723;
+        }
+        
+        .contact-info-box {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            height: 100%;
+        }
+        
+        .contact-info-item {
+            margin-bottom: 25px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #f8f9fa;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: #46291a;
+            font-size: 1.5rem;
+        }
+        
+        .contact-text h5 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .contact-text p {
+            color: #666;
+            margin-bottom: 0;
+        }
+        
+        .map-container {
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 50px;
+        }
+
+      
+        .news-section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        
+        .news-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 1.5rem;
+        }
+        
+        .news-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .news-card:hover .news-content {
+            background: #f9f9f9;
+        }
+        
+        .news-image-container {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .news-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .news-card:hover .news-image {
+            transform: scale(1.05);
+        }
+        
+        .news-date-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #fff;
+            border-radius: 5px;
+            padding: 8px 12px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .news-date-number {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 700;
+            line-height: 1;
+            color: #333;
+        }
+        
+        .news-date-month {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #666;
+        }
+        
+        .news-content {
+            padding: 25px;
+            background: #fff;
+            transition: background 0.3s ease;
+        }
+        
+        .news-meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .news-author {
+            margin-right: 10px;
+        }
+        
+        .news-divider {
+            margin: 0 10px;
+            color: #ccc;
+        }
+        
+        .news-category {
+            color: #46291a;
+        }
+        
+        .news-article-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #333;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+        
+        .news-card:hover .news-article-title {
+            color: #46291a;
+        }
+        
+        .news-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .news-btn {
+            color: #46291a;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .news-btn:hover {
+            color: #5a3723;
+        }
+        
+        .news-read-time {
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+       
+        .custom-design-section {
+            background-color: #FFF8F0; 
+            border-radius: 20px;
+            background-image: url('img/footerpage.png?v=20240526');
+            background-size: cover;
+            background-position: center;
+            padding: 60px 40px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: auto;
+            width: 90%;
+            max-width: 1240px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            z-index: 100; 
+            max-width: 100vw;
+        }
+        
+        .custom-design-content {
+            position: relative;
+            z-index: 102;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .custom-design-title {
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 10px;
+        }
+        
+        .custom-design-subtitle {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 25px;
+        }
+        
+        .custom-design-form {
+            display: flex;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .custom-design-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+            font-size: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .custom-design-btn {
+            background-color: #46291a;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            padding: 15px 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .custom-design-btn:hover {
+            background-color: #5a3723;
+        }
+        /* 添加自适应样式 */
+        @media (max-width: 992px) {
+            .custom-design-section {
+                padding: 50px 30px;
+                width: 95%;
+                background-size: cover;
+            }
+            
+            .custom-design-title {
+                font-size: 2.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .custom-design-section {
+                padding: 40px 25px;
+                width: 95%;
+            }
+            
+            .custom-design-title {
+                font-size: 2.4rem;
+            }
+            
+            .custom-design-form {
+                flex-direction: column;
+            }
+            
+            .custom-design-input {
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+            
+            .custom-design-btn {
+                border-radius: 5px;
+                width: 100%;
+            }
+            
+            .spacer-div {
+                height: 150px !important;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .custom-design-section {
+                padding: 30px 20px;
+                width: 92%;
+                border-radius: 15px;
+            }
+            
+            .custom-design-title {
+                font-size: 1.8rem;
+            }
+            
+            .custom-design-subtitle {
+                font-size: 0.9rem;
+                margin-bottom: 20px;
+            }
+            
+            .custom-design-input {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .custom-design-btn {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .spacer-div {
+                height: 130px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="home" class="hero-section2 position-relative">
+        <div class="logo-container">
+            <div class="logo">
+                <i class="fa fa-leaf logo-icon"></i>
+                <a href="contact_new.html" style="text-decoration: none; color: inherit;"><span class="logo-text">FENCE</span></a>
+            </div>
+        </div>
+
+        <nav class="hero-navigation">
+            <div class="nav-capsule">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services_new.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products_new.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about_new.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact_new.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center">
+                        <h1 class="hero-title text-white fw-bold">Want to know more<br>Specifications?</h1>
+                        <p class="text-white mb-5"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section py-5" id="services">
+        <div class="container" style="padding: 0;">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="about-content">
+                        <h2 class="about-title mb-4">We Provide the Best Fence Installation Services</h2>
+                        <p class="about-description mb-4">We deliver reliable, affordable, and stylish fencing solutions
+                            that stand the test of time. Whether for security, privacy, or aesthetics—our fences are
+                            built with precision and care.</p>
+
+                        <div class="features-grid mb-4">
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <div class="feature-card">
+                                        <div class="feature-icon">
+                                            <img src="img/icon8.png" alt="Safety Icon" class="feature-icon-img">
+                                        </div>
+                                        <div class="feature-content">
+                                            <h6 class="feature-title">Safety First<br>Always</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="feature-card">
+                                        <div class="feature-icon">
+                                            <img src="img/icon9.png" alt="Installer Icon" class="feature-icon-img">
+                                        </div>
+                                        <div class="feature-content">
+                                            <h6 class="feature-title">Skilled & Certified<br>Installers</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="feature-card">
+                                        <div class="feature-icon">
+                                            <img src="img/icon10.png" alt="Design Icon" class="feature-icon-img">
+                                        </div>
+                                        <div class="feature-content">
+                                            <h6 class="feature-title">Ustomized Fence<br>Designs</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="feature-card">
+                                        <div class="feature-icon">
+                                            <img src="img/icon11.png" alt="Setup Icon" class="feature-icon-img">
+                                        </div>
+                                        <div class="feature-content">
+                                            <h6 class="feature-title">Fast & Hassle-Free<br>Setup</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="contact_new.html" class="btn about-btn">Find Out More</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="about-image-container">
+                        <img src="img/page3_1.png" alt="Fence Installation Team" class="about-image">
+                    </div>
+                    <div class="experience-badge">
+                        <div class="experience-text">10+</div>
+                        <div class="experience-label">Years of<br>Experience</div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="statistics-section py-3" style="padding-top: 20px; padding-bottom: 20px;">
+        <div class="statistics-section-div" style="padding: 15px 60px;">
+            <div class="row align-items-center">
+                <div class="col-lg-3 col-md-6 col-6">
+                    <div class="stat-item">
+                        <div class="stat-icon-wrapper">
+                            <img src="img/icon4.png" alt="Projects Icon" class="stat-icon">
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">1.5K+</h3>
+                            <p class="stat-label">Projects Completed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-6">
+                    <div class="stat-item">
+                        <div class="stat-icon-wrapper">
+                            <img src="img/icon5.png" alt="Clients Icon" class="stat-icon">
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">980+</h3>
+                            <p class="stat-label">Satisfied Clients</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-6">
+                    <div class="stat-item">
+                        <div class="stat-icon-wrapper">
+                            <img src="img/icon6.png" alt="Team Icon" class="stat-icon">
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">50+</h3>
+                            <p class="stat-label">Expert Team</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-6">
+                    <div class="stat-item">
+                        <div class="stat-icon-wrapper">
+                            <img src="img/icon7.png" alt="Awards Icon" class="stat-icon">
+                        </div>
+                        <div class="stat-content">
+                            <h3 class="stat-number">15+</h3>
+                            <p class="stat-label">Awards Won</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section" id="products">
+        <div class="services-section-div">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="services-image-container">
+                        <img src="img/page3_3.jpg" alt="Family running by fence" class="services-image">
+                        <div class="mengban"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="services-content" style="text-align: center;">
+                
+                        <h2 class="services-title mb-3" style="color: #000 !important;">Our Specialised Services</h2>
+                        <h3 class="services-subtitle mb-4" style="color: #000 !important;">Built to Last: Premium Fence Installation</h3>
+                        <p class="services-description mb-4" style="text-align: left;color: white">We provide high-quality fencing solutions that are secure, durable, and visually appealing. Our team customizes each installation to fit your space with excellent materials and craftsmanship.</p>
+
+                        <div class="services-features mb-4">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="feature-item mb-3">
+                                        <span class="feature-bullet">●</span>
+                                        <span class="feature-text">Custom Design Solutions</span>
+                                    </div>
+                                    <div class="feature-item mb-3">
+                                        <span class="feature-bullet">●</span>
+                                        <span class="feature-text">Certified Installation Team</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feature-item mb-3">
+                                        <span class="feature-bullet">●</span>
+                                        <span class="feature-text">High-Grade Materials</span>
+                                    </div>
+                                    <div class="feature-item mb-3">
+                                        <span class="feature-bullet">●</span>
+                                        <span class="feature-text">Long-Term Durability</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="contact.html" class="btn services-btn">Request A Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section py-5" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="news-title">Fencing News & Updates</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-6 mb-4">
+                    <div class="news-card">
+                        <div class="news-image-container">
+                            <img src="img/page3_4.jpg" alt="Modern Balcony Fencing" class="news-image">
+                            <div class="news-date-badge" style="padding: 6px 10px; width: 40px; text-align: center;">
+                                <span class="news-date-number">6</span>
+                                <span class="news-date-month" style="font-size: 0.7rem;">Feb</span>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-author">By <strong>Shafiqul</strong></span>
+                                <span class="news-divider">•</span>
+                                <span class="news-category">Residential Project</span>
+                            </div>
+                            <h3 class="news-article-title">Modern Balcony Fencing For Scenic Homes</h3>
+                            <div class="news-footer">
+                                <a href="#" class="news-btn">View Post <i class="bi bi-arrow-right"></i></a>
+                                <span class="news-read-time"><i class="fa fa-fire"></i> 1 Min Read</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-6 mb-4">
+                    <div class="news-card">
+                        <div class="news-image-container">
+                            <img src="img/page3_5.jpg" alt="Durable Fencing Solutions" class="news-image">
+                            <div class="news-date-badge" style="padding: 6px 10px; width: 40px; text-align: center;">
+                                <span class="news-date-number">6</span>
+                                <span class="news-date-month" style="font-size: 0.7rem;">Feb</span>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <div class="news-meta">
+                                <span class="news-author">By <strong>Daniel</strong></span>
+                                <span class="news-divider">•</span>
+                                <span class="news-category">Commercial Project</span>
+                            </div>
+                            <h3 class="news-article-title">Durable Fencing Solutions For Commercial Sites</h3>
+                            <div class="news-footer">
+                                <a href="#" class="news-btn">View Post <i class="bi bi-arrow-right"></i></a>
+                                <span class="news-read-time"><i class="fa fa-fire"></i> 1 Min Read</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="py-5 mt-4"></div>
+        </div>
+    </section>
+
+    <div class="spacer-div" style="height: 180px; position: relative; background-color: #222;"></div>
+    
+   
+    <section class="custom-design-section">
+     
+        <div class="container-fluid px-3">
+            <div class="custom-design-content">
+                <h2 class="custom-design-title">Custom Fence Design</h2>
+                <p class="custom-design-subtitle">Fully personalized designs tailored to your property's needs.</p>
+                
+               
+                <form class="custom-design-form">
+                    <input type="email" class="custom-design-input" placeholder="Enter Your Email Address...">
+                    <a href="contact_new.html" class="custom-design-btn">Get a Quote</a>
+                </form>
+            </div>
+        </div>
+    </section>
+
+   
+    <footer id="contact" class="footer-section py-4">
+        <div class="container pt-4 mt-4" style="max-width: 1250px;">
+            <div class="row g-4 pt-3 mt-3">
+               
+                <div class="col-lg-3 col-md-6">
+                    <h2 class="footer-title mb-4 pt-3">Ready To Build<br>Your Fence?</h2>
+                    <a href="contact_new.html" class="btn footer-btn px-4 py-2 fw-bold">Get A Free Quote</a>
+                </div>
+
+               
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading mb-4 pt-3">Quick Link</h5>
+                    <ul class="list-unstyled">
+                       <li class="mb-3"><a href="index.html" class="footer-link">Home</a></li>
+                        <li class="mb-3"><a href="services_new.html" class="footer-link">Services</a></li>
+                        <li class="mb-3"><a href="products_new.html" class="footer-link">Products</a></li>
+                        <li class="mb-3"><a href="about_new.html" class="footer-link">About</a></li>
+                        <li class="mb-3"><a href="contact_new.html" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+               
+                <div class="col-lg-3 col-md-6 pt-3">
+                    <div class="contact-section mb-4">
+                        <h5 class="footer-heading mb-3"><i class="bi bi-telephone-fill me-2 footer-icon"></i>More Inquiry</h5>
+                        <p class="footer-text">+1 530-244-2158</p>
+                    </div>
+
+                    <div class="contact-section mb-4">
+                        <h5 class="footer-heading mb-3"><i class="bi bi-envelope-fill me-2 footer-icon"></i>Send Mail</h5>
+                        <p class="footer-text">PacificCoastFence81@gmail.com</p>
+                    </div>
+
+                    <div class="contact-section">
+                        <h5 class="footer-heading mb-3"><i class="bi bi-geo-alt-fill me-2 footer-icon"></i>Address</h5>
+                        <p class="footer-text">14546 Clear Creek Knolls Dr, Redding, CA<br>96001‑9542, United States</p>
+                    </div>
+                </div>
+
+                
+                <div class="col-lg-3 col-md-6 pt-3">
+                    <h5 class="footer-heading mb-3">We Are Here</h5>
+                    <p class="footer-text mb-4">We provide safe, stylish, and affordable fencing solutions to enhance your outdoor space. Built to last, designed with care.</p>
+
+                    <h5 class="footer-heading mb-3">Payment Partner</h5>
+                    <div class="payment-methods">
+                        <img src="img/visa.jpg" alt="Visa" class="payment-icon">
+                        <img src="img/stripe.jpg" alt="Stripe" class="payment-icon">
+                        <img src="img/paypal.jpg" alt="PayPal" class="payment-icon">
+                        <img src="img/Woo.jpg" alt="WOO" class="payment-icon">
+                        <img src="img/Skrill.jpg" alt="Skrill" class="payment-icon">
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider my-4">
+
+            <div class="row align-items-center footer-bottom py-3 mt-2">
+                <div class="col-md-8 d-flex align-items-center">
+                    <div class="social-icons me-5">
+                        <a href="#" class="social-icon" style="transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#555'; this.style.color='#ffc107';" onmouseout="this.style.backgroundColor='#333'; this.style.color='white';"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon" style="transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#555'; this.style.color='#ffc107';" onmouseout="this.style.backgroundColor='#333'; this.style.color='white';"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#" class="social-icon" style="transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#555'; this.style.color='#ffc107';" onmouseout="this.style.backgroundColor='#333'; this.style.color='white';"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon" style="transition: all 0.3s ease;" onmouseover="this.style.backgroundColor='#555'; this.style.color='#ffc107';" onmouseout="this.style.backgroundColor='#333'; this.style.color='white';"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                    <p class="footer-copyright mb-0">©Copyright 2025 Pacific Coast Fence | Design by Zhou Boying</p>
+                </div>
+                <div class="col-md-4 text-md-end">
+                    <div class="footer-links-wrapper">
+                        <a href="#" class="footer-bottom-link">PC Fence Inc.</a>
+                        <a href="#" class="footer-bottom-link">Privacy & Safety</a>
+                        <span class="footer-bullet">•</span>
+                        <a href="#" class="footer-bottom-link">Service Terms</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
+        });
+
+        // 定位Custom Fence Design区域的函数
+        function positionCustomDesignSection() {
+            const customDesignSection = document.querySelector('.custom-design-section');
+            const footerSection = document.querySelector('.footer-section');
+            const spacerDiv = document.querySelector('.spacer-div');
+            const newsSection = document.querySelector('.news-section');
+            
+            if (customDesignSection && footerSection && spacerDiv && newsSection) {
+                // 获取页脚顶部位置
+                const footerTop = footerSection.getBoundingClientRect().top + window.scrollY;
+                
+                // 设置间隔区域高度
+                let spacerHeight = 180; // 增加间隔高度，让Custom Fence Design往下移
+                
+                // 根据屏幕宽度调整间隔高度
+                if (window.innerWidth <= 576) {
+                    spacerHeight = 130; // 小屏幕上增加间隔
+                } else if (window.innerWidth <= 768) {
+                    spacerHeight = 150; // 中等屏幕上增加间隔
+                }
+                
+                spacerDiv.style.height = spacerHeight + 'px';
+                spacerDiv.style.backgroundColor = '#222'; 
+                
+                // 根据屏幕宽度调整Custom Fence Design区域位置
+                let positionFactor = 1.0; // 减小覆盖因子，让它往下移
+                if (window.innerWidth <= 576) {
+                    positionFactor = 0.7; // 在小屏幕上减少覆盖
+                } else if (window.innerWidth <= 768) {
+                    positionFactor = 0.8; // 在中等屏幕上适当覆盖
+                } else if (window.innerWidth <= 992) {
+                    positionFactor = 0.9; // 在大屏幕上增加覆盖
+                }
+                
+                // 添加额外的偏移量，使其向下移动
+                const extraOffset = 30;
+                customDesignSection.style.top = (footerTop - customDesignSection.offsetHeight * positionFactor + extraOffset) + 'px';
+                
+                // 确保宽度不超过视口宽度
+                const viewportWidth = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+                const sectionWidth = Math.min(viewportWidth * 0.9, 1240); // 取视口宽度的90%和1240px中的较小值
+                customDesignSection.style.width = sectionWidth + 'px';
+                customDesignSection.style.maxWidth = '100vw';
+                
+                // 添加背景填充元素
+                let backgroundFiller = document.getElementById('background-filler');
+                if (!backgroundFiller) {
+                    backgroundFiller = document.createElement('div');
+                    backgroundFiller.id = 'background-filler';
+                    backgroundFiller.style.position = 'absolute';
+                    backgroundFiller.style.left = '0';
+                    backgroundFiller.style.width = '100%';
+                    backgroundFiller.style.backgroundColor = '#222'; 
+                    backgroundFiller.style.zIndex = '0'; 
+                    document.body.appendChild(backgroundFiller);
+                }
+                
+                // 调整背景填充元素的位置和高度
+                let fillerTop = footerTop - 170; // 调整背景填充元素的位置
+                let fillerHeight = 280;
+                
+                if (window.innerWidth <= 576) {
+                    fillerTop = footerTop - 120;
+                    fillerHeight = 200;
+                } else if (window.innerWidth <= 768) {
+                    fillerTop = footerTop - 150;
+                    fillerHeight = 240;
+                }
+                
+                backgroundFiller.style.top = fillerTop + 'px';
+                backgroundFiller.style.height = fillerHeight + 'px';
+            }
+        }
+        
+        // 页面加载和窗口大小改变时调整位置
+        window.addEventListener('load', positionCustomDesignSection);
+        window.addEventListener('resize', positionCustomDesignSection);
+        
+        // 确保页面完全加载后重新计算位置
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始定位
+            positionCustomDesignSection();
+            
+            // 延迟200ms后再次定位，确保所有元素都已正确加载
+            setTimeout(positionCustomDesignSection, 200);
+            
+            // 图片加载完成后再次定位
+            const images = document.querySelectorAll('img');
+            let loadedImagesCount = 0;
+            
+            images.forEach(img => {
+                if (img.complete) {
+                    loadedImagesCount++;
+                    if (loadedImagesCount === images.length) {
+                        positionCustomDesignSection();
+                    }
+                } else {
+                    img.addEventListener('load', () => {
+                        loadedImagesCount++;
+                        if (loadedImagesCount === images.length) {
+                            positionCustomDesignSection();
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html> 
